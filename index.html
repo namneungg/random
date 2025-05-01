@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>คำสุ่ม</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f0f8ff;
+    }
+    h1 {
+      font-size: 3em;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="word">...</h1>
+
+  <script>
+    const words = ["แมว", "มะม่วง", "ซูชิ", "กระต่าย", "ไดโนเสาร์", "กาแฟ", "ยูนิคอร์น", "ปู", "รถไฟ", "สายรุ้ง"];
+    const randomWord = words[Math.floor(Math.random() * words.length)];
+    document.getElementById("word").textContent = randomWord;
+  </script>
+</body>
+</html>
