@@ -13,58 +13,45 @@
 
     body {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
       height: 100vh;
       font-family: 'Pridi', sans-serif;
       background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
       background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
       background-size: contain;
       color: #2e2e2e;
-      flex-direction: column;
-    }
-    
-    h1 {
-      font-size: 4em;
-      padding: 20px 40px;
-      border: 3px solid #2e2e2e;
-      border-radius: 10px;
-      background-color: rgba(255, 255, 255, 0.6);
-      backdrop-filter: blur(3px);
-      box-shadow: 4px 4px 0 #aaa;
-      margin: 0;
-      transition: all 0.3s ease;
-    }
-    
-    .branding {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      margin-bottom: 40px;
     }
 
     .logo {
-      width: 60px;
-      height: 60px;
+      width: 120px;
+      height: 120px;
       object-fit: contain;
+      margin-bottom: 10px;
     }
 
     .project-name {
-      font-size: 2em;
+      font-size: 2.5em;
       font-weight: bold;
-      margin: 0;
+      margin-bottom: 40px;
       color: #2e2e2e;
     }
 
-
-    h1:hover {
-      transform: scale(1.05);
-      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    #word {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #333;
+      padding: 20px 30px;
+      border: 3px solid #2e2e2e;
+      border-radius: 12px;
+      background-color: rgba(255, 255, 255, 0.85);
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin-bottom: 20px;
     }
 
     button {
-      margin-top: 40px;
       padding: 12px 28px;
       font-size: 1.1em;
       background-color: transparent;
@@ -74,6 +61,7 @@
       cursor: pointer;
       transition: all 0.3s ease;
       font-family: inherit;
+      margin-bottom: 30px;
     }
 
     button:hover {
@@ -82,8 +70,6 @@
     }
 
     .caption {
-      display: inline-block;
-      margin-top: 12px;
       font-size: 1.1em;
       color: #444;
       text-decoration: none;
@@ -95,37 +81,24 @@
       color: #000;
       border-bottom-style: solid;
     }
-
-    #word {
-      font-size: 1.5em;
-      font-weight: bold;
-      color: #333;
-      margin-top: 20px;
-      padding: 10px;
-      border-radius: 8px;
-      background-color: rgba(255, 255, 255, 0.8);
-      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
   </style>
 </head>
 <body>
-  <!-- โลโก้ + ชื่อโครงการ -->
-  <div class="branding">
-    <img src="IMG_5840.PNG" alt="โลโก้โครงการ" class="logo">
-    <h1 class="project-name">Join and Make</h1>
-  </div>
+
+  <!-- โลโก้ -->
+  <img src="IMG_5840.PNG" alt="โลโก้โครงการ" class="logo">
+
+  <!-- ชื่อโครงการ -->
+  <div class="project-name">Join and Make</div>
 
   <!-- คำสุ่ม -->
   <div id="word">...</div>
   <button onclick="showRandomWord()">เอาอีก</button>
 
-  <!-- คำบรรยายคลิกได้ --> 
-  <div>
-    <a class="caption" href="https://www.instagram.com/jam.exhibitions" target="_blank">
-      Jam.exhibitions
-    </a>
-  </div>
+  <!-- ลิงก์ -->
+  <a class="caption" href="https://www.instagram.com/jam.exhibitions" target="_blank">
+    Jam.exhibitions
+  </a>
 
   <script>
     const words = [
@@ -143,5 +116,6 @@
 
     showRandomWord();
   </script>
+
 </body>
 </html>
