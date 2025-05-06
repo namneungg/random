@@ -7,23 +7,23 @@
   <style>
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      font-family: 'Chakra Petch', sans-serif;
+      height: 100vh;
+      font-family: 'Pridi', sans-serif;
       background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
       background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
       background-size: contain;
       color: #2e2e2e;
+      flex-direction: column;
     }
-    
+
     .branding {
       display: flex;
       align-items: center;
@@ -42,6 +42,7 @@
       font-size: 2em;
       font-weight: bold;
       margin: 0;
+      color: #2e2e2e;
     }
 
     h1 {
@@ -49,11 +50,16 @@
       padding: 20px 40px;
       border: 3px solid #2e2e2e;
       border-radius: 10px;
-      background-color: rgba(255,255,255,0.6);
+      background-color: rgba(255, 255, 255, 0.6);
       backdrop-filter: blur(3px);
       box-shadow: 4px 4px 0 #aaa;
       margin: 0;
-      transition: 0.3s ease;
+      transition: all 0.3s ease;
+    }
+
+    h1:hover {
+      transform: scale(1.05);
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
     }
 
     button {
@@ -72,10 +78,7 @@
     button:hover {
       background-color: #2e2e2e;
       color: #fff;
-          .image-section {
-      margin-top: 50px;
     }
-
 
     .caption {
       display: inline-block;
@@ -91,6 +94,18 @@
       color: #000;
       border-bottom-style: solid;
     }
+
+    #word {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #333;
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
   </style>
 </head>
 <body>
@@ -101,21 +116,25 @@
   </div>
 
   <!-- คำสุ่ม -->
-  <div id="word">...</div><br>
+  <div id="word">...</div>
   <button onclick="showRandomWord()">เอาอีก</button>
 
   <!-- คำบรรยายคลิกได้ --> 
-  <div >
+  <div>
     <a class="caption" href="https://www.instagram.com/jam.exhibitions" target="_blank">
       Jam.exhibitions
     </a>
-    </div>
+  </div>
+
   <script>
-    const words =  ["SASOM KHWAM SAO", "เลื่อนจ๊อยคล้อยตาม", "งามช้อยพื้นบ้าน", "โปร่งโล่งมงคล", "สองด้านเคียงกัน", 
-                   "พิกลโสภา", "แยกแต่ไม่จาก", "Craft with Purpose", "ต่อประกอบ ", "งดงามดั่งโค้ง",
-                   "ต่อคานงานจ๊อย", "คัดสรรชั้นเอย", "สามรวมเป็นหนึ่ง", "โยกเยก", "กาง พับ เก็บ",
-                   "Designed for a quiet pause ", "ไม้หล่อแต่ก่อกวน", "รักพ่อให้รักไม้", "un title", 
-                   "Respectful evolution", "Form follows faith", ];
+    const words = [
+      "SASOM KHWAM SAO", "เลื่อนจ๊อยคล้อยตาม", "งามช้อยพื้นบ้าน", "โปร่งโล่งมงคล", "สองด้านเคียงกัน", 
+      "พิกลโสภา", "แยกแต่ไม่จาก", "Craft with Purpose", "ต่อประกอบ ", "งดงามดั่งโค้ง",
+      "ต่อคานงานจ๊อย", "คัดสรรชั้นเอย", "สามรวมเป็นหนึ่ง", "โยกเยก", "กาง พับ เก็บ",
+      "Designed for a quiet pause ", "ไม้หล่อแต่ก่อกวน", "รักพ่อให้รักไม้", "un title", 
+      "Respectful evolution", "Form follows faith"
+    ];
+
     function showRandomWord() {
       const randomWord = words[Math.floor(Math.random() * words.length)];
       document.getElementById("word").textContent = randomWord;
