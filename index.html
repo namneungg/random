@@ -3,27 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <title>Random Jam</title>
-  <link href="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@500&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      font-family: "Chakra Petch", sans-serif;
-      background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
+      padding: 40px 20px;
+      font-family: 'Pridi', serif;
+      background: #f5f5f5;
       background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
-      background-size: contain;
-      color: #2e2e2e;
+      text-align: center;
+      color: #2c2c2c;
     }
-    
+
     .branding {
       display: flex;
       align-items: center;
@@ -42,34 +33,33 @@
       font-size: 2em;
       font-weight: bold;
       margin: 0;
-    h1 {
-      font-size: 4em;
+    }
+
+    #word {
+      font-size: 3em;
       padding: 20px 40px;
-      border: 3px solid #2e2e2e;
-      border-radius: 10px;
-      background-color: rgba(255,255,255,0.6);
-      backdrop-filter: blur(3px);
+      border: 3px solid #000;
+      border-radius: 12px;
+      display: inline-block;
+      background-color: white;
       box-shadow: 4px 4px 0 #aaa;
-      margin: 0;
-      transition: 0.3s ease;
     }
 
     button {
-      margin-top: 40px;
-      padding: 12px 28px;
-      font-size: 1.1em;
-      background-color: transparent;
-      color: #2e2e2e;
-      border: 2px solid #2e2e2e;
+      margin-top: 30px;
+      padding: 10px 24px;
+      font-size: 1.2em;
+      border: 2px solid #000;
+      background: none;
       border-radius: 8px;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: all 0.2s;
       font-family: inherit;
     }
 
     button:hover {
-      background-color: #2e2e2e;
-      color: #fff;
+      background-color: #000;
+      color: white;
     }
 
     .image-section {
@@ -101,6 +91,7 @@
   </style>
 </head>
 <body>
+
   <!-- โลโก้ + ชื่อโครงการ -->
   <div class="branding">
     <img src="logo.png" alt="โลโก้โครงการ" class="logo">
@@ -115,24 +106,27 @@
   <div class="image-section">
     <img src="143C827E-0810-4EAB-AAC4-E07D48FE411D.jpeg" alt="ภาพประกอบคำสุ่ม">
     <br>
-    <a class="caption" https://www.instagram.com/jam.exhibitions?igsh=N3I0c2Jwbmhocmpv" target="_blank">
-      
+    <a class="caption" href="https://www.instagram.com/yourusername" target="_blank">
       ภาพบรรยากาศสุ่มคำจากจิตสำนึก
     </a>
   </div>
+
+  <!-- JavaScript -->
   <script>
-    const words = ["SASOM KHWAM SAO", "เลื่อนจ๊อยคล้อยตาม", "งามช้อยพื้นบ้าน", "โปร่งโล่งมงคล", "สองด้านเคียงกัน", 
-                   "พิกลโสภา", "แยกแต่ไม่จาก", "Craft with Purpose", "ต่อประกอบ ", "งดงามดั่งโค้ง",
-                   "ต่อคานงานจ๊อย", "คัดสรรชั้นเอย", "สามรวมเป็นหนึ่ง", "โยกเยก", "กาง พับ เก็บ",
-                   "Designed for a quiet pause ", "ไม้หล่อแต่ก่อกวน", "รักพ่อให้รักไม้", "un title", 
-                   "Respectful evolution", "Form follows faith", ];
+    const words = [
+      "งดงามดั่งโค้ง", "แมวพูดได้", "หมอกย้อมใจ", 
+      "กาแฟลอยฟ้า", "ดอกไม้เต้นระบำ", "เส้นสายแห่งความคิด"
+    ];
 
     function showRandomWord() {
       const randomWord = words[Math.floor(Math.random() * words.length)];
       document.getElementById("word").textContent = randomWord;
     }
 
+    // เรียกคำเริ่มต้น
     showRandomWord();
   </script>
+
 </body>
-</html>
+</html><!DOCTYPE html>
+<h
