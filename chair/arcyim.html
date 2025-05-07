@@ -4,11 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ดู PDF จาก GitHub</title>
+  <style>
+    /* ทำให้ iframe ปรับขนาดตามขนาดหน้าจอ */
+    iframe {
+      width: 100%;
+      height: 100vh; /* 100% ของความสูงของหน้าจอ */
+      border: none; /* เอาขอบ iframe ออก */
+    }
+  </style>
 </head>
 <body>
   <h1>ARC YIM</h1>
   
-  <iframe src="https://github.com/namneungg/random/raw/main/files/arcyim.pdf" width="100%" height="600px"></iframe>
+  <!-- ฝัง PDF และปรับขนาดให้พอดีกับหน้าจอ -->
+  <iframe src="https://github.com/namneungg/random/raw/main/files/arcyim.pdf"></iframe>
+
+  <!-- ลิงก์ดาวน์โหลด -->
   <p><a href="https://github.com/namneungg/random/raw/main/files/arcyim.pdf" target="_blank">DOWNLOAD PDF</a></p>
 </body>
 </html>
