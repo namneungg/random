@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>แคตตาล็อกเก้าอี้</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
 
+    .catalog {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .item {
+      background-color: white;
+      padding: 10px;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .item:hover {
+      transform: scale(1.03);
+    }
+
+    .item img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .item-name {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>แคตตาล็อกเก้าอี้</h1>
+
+  <div class="catalog">
+    <!-- เก้าอี้ 1 -->
+    <a class="item" href="chair1.html">
+      <img src="images/chair1.jpg" alt="เก้าอี้ 1">
+      <div class="item-name">เก้าอี้ไม้สีโอ๊ค</div>
+    </a>
+
+    <!-- เก้าอี้ 2 -->
+    <a class="item" href="chair2.html">
+      <img src="images/chair2.jpg" alt="เก้าอี้ 2">
+      <div class="item-name">เก้าอี้หนังสีน้ำตาล</div>
+    </a>
+
+    <!-- เก้าอี้ 3 -->
+    <a class="item" href="chair3.html">
+      <img src="images/chair3.jpg" alt="เก้าอี้ 3">
+      <div class="item-name">เก้าอี้สำนักงาน</div>
+    </a>
+
+    <!-- ทำแบบนี้ต่อไปจนถึงเก้าอี้ 21 -->
+    <!-- ตัวอย่างต่อ: -->
+    <!-- chair4.html ถึง chair21.html -->
+
+    <!-- คุณสามารถคัดลอกบรรทัดด้านบนและเปลี่ยนลิงก์/ชื่อ/รูปภาพให้ครบ 21 รายการ -->
+  </div>
+
+</body>
+</html>
