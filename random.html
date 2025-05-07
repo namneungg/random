@@ -102,9 +102,9 @@
 </head>
 <body>
   <!-- เพิ่มเสียงแบล็คกราวด์ -->
-  <audio id="backgroundMusic" autoplay loop>
+  <audio id="backgroundMusic" loop>
     <source src="background.mp3" type="audio/mp3">
-    เสียงของคุณไม่ได้รับการรองรับ
+    เบราว์เซอร์ของคุณไม่รองรับการเล่นเสียง
   </audio>
   <div class="page">
   
@@ -134,7 +134,7 @@
 
       function showRandomWord() {
         const randomWord = words[Math.floor(Math.random() * words.length)];
-        document.getElementById("word").textContent = randomWord;
+        document.getElementB  AyId("word").textContent = randomWord;
       }
 
       showRandomWord();
