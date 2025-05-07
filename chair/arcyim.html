@@ -3,22 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ARC YIM</title>
+  <title>รูปภาพเต็มหน้าเว็บ</title>
   <style>
-    /* ทำให้ iframe ปรับขนาดตามขนาดหน้าจอ */
-    iframe {
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      height: 100%;
+    }
+    .fullscreen-bg {
+      background-image: url('arcyimw.png'); /* เปลี่ยนเป็น URL รูปภาพของคุณ */
+      background-size: cover;
+      background-position: center;
       width: 100%;
-      height: 80vh; /* 100% ของความสูงของหน้าจอ */
-      border: none; /* เอาขอบ iframe ออก */
+      height: 100%;
     }
   </style>
 </head>
 <body>
-  
-  <!-- ฝัง PDF และปรับขนาดให้พอดีกับหน้าจอ -->
-  <iframe src="https://github.com/namneungg/random/raw/main/files/arcyim.pdf"></iframe>
-
-  <!-- ลิงก์ดาวน์โหลด -->
-  <p><a href="https://github.com/namneungg/random/raw/main/files/arcyim.pdf" target="_blank">DOWNLOAD PDF</a></p>
+  <div class="fullscreen-bg"></div>
 </body>
 </html>
