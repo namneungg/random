@@ -50,6 +50,28 @@
       background-color: #2e2e2e;
       color: #fff;
     }
+    .caption {
+      font-size: 1.1em;
+      color: #444;
+      text-decoration: none;
+      border-bottom: 1px dashed #444;
+      transition: 0.2s ease;
+      width: 200px; /* ล็อกความยาวเส้น */
+      margin: 20px auto 0; /* จัดกึ่งกลาง */
+      text-align: center; /* ให้ข้อความอยู่กลางเส้น */
+      display: block;
+    }
+
+    .caption:hover {
+      color: #000;
+      border-bottom-style: solid;
+    }
+    
+    .caption img {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+    }
   </style> 
 </head>
 <body>
@@ -67,6 +89,11 @@
       <a href="random.html" class="button">Fortune</a>
    
    </div>
+     <!-- ลิงก์ -->
+    <a class="caption" href="https://www.instagram.com/jam.exhibitions" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="IG" style="width:20px; vertical-align:middle; margin-right:8px;">
+      Jam.exhibitions
+    </a>
   </div>
     <!-- เพิ่มเสียงแบล็คกราวด์ -->
   <audio id="backgroundMusic" autoplay loop>
