@@ -2,141 +2,76 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- สำคัญสำหรับมือถือ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Join and Make</title>
-  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      font-family: 'Urbanist', sans-serif;
-      background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
-      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
-      background-size: contain;
-      color: #2e2e2e;
-    }
-    
-    .page {
-    position: relative;
-    top: -40px; /* ขยับขึ้นทั้งหน้า */
-    text-align: center;
-    }
-
-    .logo {
-      width: 130px;
-      height: 130px;
-      margin-bottom: 5px;
-    
-    }
-
-    .project-name {
-      font-size: 1.75em;
-      font-weight: bold;
-      margin-bottom: 120px;
-      color: #2e2e2e;
-    }
-
-    #word {
-      font-size: 1.8em;
-      font-weight: bold;
-      color: #333;
-      padding: 20px 30px;
-      border: 3px solid #2e2e2e;
-      border-radius: 12px;
-      background-color: rgba(255, 255, 255, 0.85);
-      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    button {
-      padding: 12px 28px;
-      font-size: 1.1em;
-      background-color: transparent;
-      color: #2e2e2e;
-      border: 2px solid #2e2e2e;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-family: inherit;
-      margin-bottom: 120px;
-    }
-
-    button:hover {
-      background-color: #2e2e2e;
-      color: #fff;
-    }
-
-    .caption {
-      font-size: 1.1em;
-      color: #444;
-      text-decoration: none;
-      border-bottom: 1px dashed #444;
-      transition: 0.2s ease;
-      width: 200px; /* ล็อกความยาวเส้น */
-      margin: 20px auto 0; /* จัดกึ่งกลาง */
-      text-align: center; /* ให้ข้อความอยู่กลางเส้น */
-      display: block;
-    }
-
-    .caption:hover {
-      color: #000;
-      border-bottom-style: solid;
-    }
-    
-    .caption img {
-      width: 20px;
-      height: 20px;
-      vertical-align: middle;
+    /* สไตล์ CSS ของคุณที่นี่ */
+    /* ... */
+    .audio-toggle {
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  
-  <div class="page">
-  
-    <!-- โลโก้ -->
-    <img src="logo.PNG" alt="โลโก้โครงการ" class="logo">
+  <!-- โลโก้ -->
+  <img src="logo.PNG" alt="โลโก้โครงการ" class="logo">
 
-    <!-- ชื่อโครงการ -->
-    <div class="project-name">JOIN + MAKE</div>
+  <!-- ชื่อโครงการ -->
+  <div class="project-name">JOIN + MAKE</div>
 
-    <!-- คำสุ่ม -->
-    <div id="word">...</div>
-    <button onclick="showRandomWord()">เอาอีก</button>
+  <!-- คำสุ่ม -->
+  <div id="word">...</div>
+  <button id="randomWordBtn">เอาอีก</button>
 
-    <!-- ลิงก์ -->
-    <a class="caption" href="https://www.instagram.com/jam.exhibitions" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="IG" style="width:20px; vertical-align:middle; margin-right:8px;">
-      Jam.exhibitions
-    </a>
-  
-    <script>
-      const words = [
-        "SASOM KHWAM SAO", "เลื่อนจ๊อยคล้อยตาม", "งามช้อยพื้นบ้าน", "โปร่งโล่งมงคล", "สองด้านเคียงกัน", 
-        "พิกลโสภา", "แยกแต่ไม่จาก", "Craft with Purpose", "ต่อประกอบ ", "งดงามดั่งโค้ง",
-        "ต่อคานงานจ๊อย", "คัดสรรชั้นเอย", "สามรวมเป็นหนึ่ง", "โยกเยก", "กาง พับ เก็บ",
-        "   Designed for     a quiet pause ", "ไม้หล่อแต่ก่อกวน", "รักพ่อให้รักไม้", "un title", 
-        "Respectful evolution", "Form follows faith" ];
+  <!-- ปุ่มเปิด/ปิดเสียง -->
+  <button id="audioToggleBtn" class="audio-toggle">เปิดเสียง</button>
 
-      function showRandomWord() {
-        const randomWord = words[Math.floor(Math.random() * words.length)];
-        document.getElementB  AyId("word").textContent = randomWord;
+  <!-- ลิงก์ -->
+  <a class="caption" href="https://www.instagram.com/jam.exhibitions" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="IG" style="width:20px; vertical-align:middle; margin-right:8px;">
+    Jam.exhibitions
+  </a>
+
+  <!-- แท็กเสียง -->
+  <audio id="backgroundMusic" loop>
+    <source src="background.mp3" type="audio/mp3">
+    เบราว์เซอร์ของคุณไม่รองรับแท็กเสียง
+  </audio>
+
+  <script>
+    const words = [
+      "SASOM KHWAM SAO", "เลื่อนจ๊อยคล้อยตาม", "งามช้อยพื้นบ้าน", "โปร่งโล่งมงคล", "สองด้านเคียงกัน", 
+      "พิกลโสภา", "แยกแต่ไม่จาก", "Craft with Purpose", "ต่อประกอบ", "งดงามดั่งโค้ง",
+      "ต่อคานงานจ๊อย", "คัดสรรชั้นเอย", "สามรวมเป็นหนึ่ง", "โยกเยก", "กาง พับ เก็บ",
+      "Designed for a quiet pause", "ไม้หล่อแต่ก่อกวน", "รักพ่อให้รักไม้", "un title", 
+      "Respectful evolution", "Form follows faith"
+    ];
+
+    const wordElement = document.getElementById("word");
+    const randomWordBtn = document.getElementById("randomWordBtn");
+    const audioToggleBtn = document.getElementById("audioToggleBtn");
+    const backgroundMusic = document.getElementById("backgroundMusic");
+
+    function showRandomWord() {
+      const randomWord = words[Math.floor(Math.random() * words.length)];
+      wordElement.textContent = randomWord;
+    }
+
+    randomWordBtn.addEventListener("click", showRandomWord);
+
+    audioToggleBtn.addEventListener("click", () => {
+      if (backgroundMusic.paused) {
+        backgroundMusic.play();
+        audioToggleBtn.textContent = "ปิดเสียง";
+      } else {
+        backgroundMusic.pause();
+        audioToggleBtn.textContent = "เปิดเสียง";
       }
+    });
 
-      showRandomWord();
-    </script>
-  </div>
- 
-  
+    // แสดงคำสุ่มเริ่มต้น
+    showRandomWord();
+  </script>
 </body>
 </html>
