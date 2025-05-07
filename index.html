@@ -24,6 +24,11 @@
       background-size: contain;
       color: #2e2e2e;
     }
+    
+    .page {
+    position: relative;
+    top: -40px; /* ขยับขึ้นทั้งหน้า */
+    }
 
     .logo {
       width: 150px;
@@ -91,40 +96,40 @@
   </style>
 </head>
 <body>
+  <div class="page">
+  
+    <!-- โลโก้ -->
+    <img src="logo.PNG" alt="โลโก้โครงการ" class="logo">
 
-  <!-- โลโก้ -->
-  <img src="logo.PNG" alt="โลโก้โครงการ" class="logo">
+    <!-- ชื่อโครงการ -->
+    <div class="project-name">Join and Make</div>
 
-  <!-- ชื่อโครงการ -->
-  <div class="project-name">Join and Make</div>
+    <!-- คำสุ่ม -->
+    <div id="word">...</div>
+    <button onclick="showRandomWord()">เอาอีก</button>
 
-  <!-- คำสุ่ม -->
-  <div id="word">...</div>
-  <button onclick="showRandomWord()">เอาอีก</button>
+    <!-- ลิงก์ -->
+     <div class="caption img">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="IG" style="width:20px; vertical-align:middle; margin-right:8px;">
+    <a class="caption" href="https://www.instagram.com/jam.exhibitions" target="_blank">
+      Jam.exhibitions
+    </a>
+  
+    <script>
+      const words = [
+        "SASOM KHWAM SAO", "เลื่อนจ๊อยคล้อยตาม", "งามช้อยพื้นบ้าน", "โปร่งโล่งมงคล", "สองด้านเคียงกัน", 
+        "พิกลโสภา", "แยกแต่ไม่จาก", "Craft with Purpose", "ต่อประกอบ ", "งดงามดั่งโค้ง",
+        "ต่อคานงานจ๊อย", "คัดสรรชั้นเอย", "สามรวมเป็นหนึ่ง", "โยกเยก", "กาง พับ เก็บ",
+        "Designed for a quiet pause ", "ไม้หล่อแต่ก่อกวน", "รักพ่อให้รักไม้", "un title", 
+        "Respectful evolution", "Form follows faith" ];
 
-  <!-- ลิงก์ -->
-   <div class="caption img">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="IG" style="width:20px; vertical-align:middle; margin-right:8px;">
-  <a class="caption" href="https://www.instagram.com/jam.exhibitions" target="_blank">
-    Jam.exhibitions
-  </a>
+      function showRandomWord() {
+        const randomWord = words[Math.floor(Math.random() * words.length)];
+        document.getElementById("word").textContent = randomWord;
+      }
 
-  <script>
-    const words = [
-      "SASOM KHWAM SAO", "เลื่อนจ๊อยคล้อยตาม", "งามช้อยพื้นบ้าน", "โปร่งโล่งมงคล", "สองด้านเคียงกัน", 
-      "พิกลโสภา", "แยกแต่ไม่จาก", "Craft with Purpose", "ต่อประกอบ ", "งดงามดั่งโค้ง",
-      "ต่อคานงานจ๊อย", "คัดสรรชั้นเอย", "สามรวมเป็นหนึ่ง", "โยกเยก", "กาง พับ เก็บ",
-      "Designed for a quiet pause ", "ไม้หล่อแต่ก่อกวน", "รักพ่อให้รักไม้", "un title", 
-      "Respectful evolution", "Form follows faith"
-    ];
-
-    function showRandomWord() {
-      const randomWord = words[Math.floor(Math.random() * words.length)];
-      document.getElementById("word").textContent = randomWord;
-    }
-
-    showRandomWord();
-  </script>
-
+      showRandomWord();
+    </script>
+  </div>
 </body>
 </html>
